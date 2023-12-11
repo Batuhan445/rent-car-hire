@@ -3,7 +3,7 @@ import { CustomFilter, SearchBar, Hero, CarCard, ShowMore } from "@/components";
 import { fuels, yearsOfProduction } from "@/constants";
 import { fetchCars } from "@/utils";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default async function Home() {
   const [ allCars, setAllCars] = useState([])
@@ -14,7 +14,19 @@ export default async function Home() {
   const [model, setModel] = useState("")
 
   // filter states
-  
+  const [first, setFirst] = useState("")
+  const [year, setYear] = useState(2020)
+
+  // pagination states
+  const [limit, setLimit] = useState(10)
+
+  const getCars = async() => {
+    
+  }
+
+  useEffect (() => {
+    getCars()
+  }, [fuels, year, limit, manufacturer, model])
   
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
