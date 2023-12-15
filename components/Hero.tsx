@@ -7,7 +7,7 @@ const Hero = () => {
     const router = useRouter()
 
     const handleScroll = () => {
-        router.push(`#carCard`)
+        router.push(`#carCard`, undefined)
     }
 
   return (
