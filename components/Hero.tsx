@@ -1,11 +1,13 @@
 "use client"
 import Image from 'next/image'
 import { CustomButton } from '.'
+import { useRouter } from 'next/navigation'
 
 const Hero = () => {
+    const router = useRouter()
 
     const handleScroll = () => {
-
+        router.push(`#carCard`)
     }
 
   return (
@@ -26,7 +28,7 @@ const Hero = () => {
                   title="Araçları Keşfedin"
                   containerStyles="bg-primary-blue text-white rounded-full mt-10"
                   btnType='button'
-                  handleClick={handleScroll} rightIcon={''}            />
+                  handleClick={handleScroll} rightIcon={''}           />
 
         </div>
 

@@ -19,7 +19,7 @@ const CarCard = ({car}: CarCardProps) => {
     
 
   return (
-    <div className='car-card group'>
+    <div className='car-card group' id='carCard'>
 
       <div className='car-card__content'>
         <h2 className='car-card__content-title'>
